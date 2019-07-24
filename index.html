@@ -1,1 +1,144 @@
-Hello World
+<!DOCTYPE html>
+<html>
+<link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style> 
+  .banner {
+    position: relative;
+    background-size: cover;
+    padding: 10px;
+    text-align: left;
+  }
+  body {
+    background-color: #a9d5d6;
+    text-align: center;
+  }
+  h1 {
+    font-family: 'Source Code Pro';
+    font-weight: 100;
+    font-size: 40px;
+    color: white;
+    text-align: center;
+  }
+  h2 {
+    font-family: 'Source Code Pro';
+    font-weight: 100;
+    font-size: 20px;
+    color: white;
+    text-align: center;
+  }
+  p {
+    font-family: 'Source Code Pro';
+    font-weight: 100;
+    font-size: 20px;
+    color: black;
+    text-align: left;
+  }
+  .logo {
+      width: 100px;
+      height: 100px;
+  }
+  .logo:hover {
+      filter: invert(100%);
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 75%;
+  }
+
+  /* column layout */
+  * {
+        box-sizing: border-box;
+    }
+    .leftcolumn {
+        float: left;
+        width: 40%;
+    }
+    .rightcolumn {
+        float: left;
+        width: 55%;
+    }
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+
+    /*social media icons */
+    .fa {
+        padding: 10px;
+        font-size: 30px;
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        text-decoration: none;
+        margin: 0px 4px;
+        border-radius: 50%;
+    }
+    .fa:hover {
+        opacity: 0.7;
+    }
+    .fa-linkedin {
+        background: #585f6f;
+        color: #fff;
+    }
+    .fa-instagram {
+        background: #1b8787;
+        color: #fff;
+    }
+    .fa-send {
+        background: #e97977;
+        color: #fff;
+    }
+    .fa-star {
+        background: #fea973;
+        color: #fff;
+    }
+
+
+</style>
+
+<div class="banner">
+    <img class="logo" src="home_images/sophunky_logo.png" onclick="homePage()"/>
+</div>
+
+<body>
+    <p></p>
+
+    <div class="row">
+        <div class="leftcolumn">
+            <img class="image1" src="home_images/plastic_peacock.png"/>
+        </div>
+        <div class="rightcolumn">
+            <h1>about me</h1>
+            <p>I came up with the name Sophunky in middle school. I am now fresh out of college, and here we are, dusting off the cobwebs and reviving the sophunky.com domain name. Am I embarrased? Yes, a little. It's a bit cheesy. But it's also true to who I am and what I aim to create. I am a designer, coder, and lover of all things quirky. So phunk it, I'm sticking with Sophunky, and with this childlike mindset, I hope to always keep imagining, exploring, and creating new things.</p>
+            <h2 style="color: #fff">more about me below:</h2>
+            <a href="#" class="fa fa-linkedin" onclick = "openLinkedIn()"></a>
+            <a href="#" class="fa fa-instagram" onclick="openInstagram()"></a>
+            <a href="#" class="fa fa-send" onclick="openEmail()"></a>
+            <a href="#" class="fa fa-star" onclick="openResume()"></a>
+        </div>
+    </div>
+</body>
+</html>
+
+<script>
+    function homePage() {
+        location.replace("sophunky.html");
+    }
+    function openLinkedIn() {
+        location.replace("https://www.linkedin.com/in/sophie-mittelstadt/");
+    }
+    function openInstagram() {
+        location.replace("https://www.instagram.com/smittelstudio/");
+    }
+    function openEmail() {
+        location.replace("mailto:sophie.mittelstadt@gmail.com");
+    }
+    function openResume() {
+        location.replace("Resume_072019.pdf");
+    }
+</script>  
