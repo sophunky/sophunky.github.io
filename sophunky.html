@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<style>
+  body {
+    background-color: #7f7ea3;
+    text-align: center;
+  }
+  h1 {
+    font-family: monospace;
+    font-weight: 100;
+    font-size: 70px;
+    color: white;
+  }
+  .parent {
+    position: relative;
+    top: 0;
+    left: 0;
+    text-align: center;
+    padding-bottom: 50px;
+  }
+  .logo {
+      width: 150px;
+      height: 150px;
+      padding-bottom: 15px;
+  }
+  .logo:hover {
+      filter: invert(100%);
+  }
+  .image1 {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 350px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+
+
+  .container {
+    position: relative;
+    width: 350px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: #008CBA;
+  }
+
+  .container:hover .overlay {
+    opacity: 1;
+  }
+
+  .text {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+</style>
+<head>
+    <img class="logo" src="home_images/sophunky_logo.png" onclick="homePage()"/>
+</head>
+
+<body>
+
+  <div class="parent">
+
+
+    <img class="image1" src="home_images/malleable.png" onclick="malleable()"/>
+    <img class="image1" src="home_images/products.png" onclick="homePage()"/>
+    <img class="image1" src="home_images/digital_doodles.png" onclick="homePage()"/>
+  </div>
+  <div class="parent">
+    <img class="image1" src="home_images/malleable.png" onclick="homePage()"/>
+    <img class="image1" src="home_images/products.png" onclick="homePage()"/>
+    <img class="image1" src="home_images/about_me.png" onclick="aboutMe()"/>
+  </div>
+
+</body>
+</html>
+
+<script>
+    function homePage() {
+        location.replace("sophunky.html");
+    }
+    function malleable() {
+      location.replace("malleable.html");
+    }
+    function aboutMe() {
+        location.replace("about_me.html");
+    }
+</script>
