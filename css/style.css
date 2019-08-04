@@ -16,9 +16,10 @@ body {
     text-align: center;
 }
 h1 {
-    font-family: 'Source Code Pro';
-    font-weight: 100;
-    font-size: 40px;
+    font-family: 'Open Sans';
+    font-weight: bolder;
+    font-size: 30px;
+    font-style: italic;
     color: white;
     text-align: center;
 }
