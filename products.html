@@ -4,7 +4,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="css/style.css">
-    
+
 <style>
   * {
     box-sizing: border-box;
@@ -49,15 +49,35 @@
     color: #282828;
   }
 
+  .column1 {
+    width: 50%;
+    float: left;
+    padding: 30px;
+  }
+  .column2 {
+    width: 50%;
+    float: left;
+    padding: 30px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  a {
+    text-decoration: none;
+  }
+
 </style>
 
-<title>brand book</title>
+<title>products</title>
 
 <div class="topnav" style="text-align: center;">
     <a href="index.html">home</a>
     <a href="malleable.html" href="#news">malleable</a>
     <a class="active">products</a>
     <a href="branding.html" href="#news">branding</a>
+    <a href="ui_ux_design.html">ui/ux design</a>
     <a href="about_me.html">about me</a>
 </div>
 
@@ -66,26 +86,51 @@
 
     <h1>PRODUCTS</h1>
 
-    
-    <div class="w3-content" style="max-width:55%">
-            <img class="mySlides" src="images/products_images/lily.jpeg" style="width:100%">
-            <img class="mySlides" src="images/products_images/lily2.jpeg" style="width:100%">
-            <img class="mySlides" src="images/products_images/lily.jpeg" style="width:100%">
+
+    <div class="w3-content" style="max-width:55%; padding-bottom:30px;">
+            <a href="#chair"><img class="mySlides" src="images/products_images/chair_1.jpg" style="width:66%; margin-left: 17%;"></a>
+            <a href="#lily"><img class="mySlides" src="images/products_images/lily.jpeg" style="width:100%"></a>
 
         <div class="w3-section">
             <button class="w3-button" onclick="plusDivs(-1)">❮ Prev</button>
-            <button class="w3-button demo" onclick="currentDiv(1)">1</button> 
-            <button class="w3-button demo" onclick="currentDiv(2)">2</button> 
-            <button class="w3-button demo" onclick="currentDiv(3)">3</button> 
+            <button class="w3-button demo" onclick="currentDiv(1)">1</button>
+            <button class="w3-button demo" onclick="currentDiv(2)">2</button>
             <button class="w3-button" onclick="plusDivs(1)">Next ❯</button>
         </div>
     </div>
-        
+
+    <div style="background-color: #a9d4d5; padding-top: 30px; padding-bottom: 30px;">
+    <h1 id="chair">2-IN-1 CHAIR AND PICTURE FRAME</h1>
+    <div class="row">
+      <div class="column1">
+        <img src="images/products_images/chair_1.jpg" style="width:100%">
+        <img src="images/products_images/chair_2.jpg" style="width:100%; padding-top: 30px;">
+        <img src="images/products_images/chair_3.jpg" style="width:100%; padding-top: 30px;">
+      </div>
+      <div class="column2">
+        <p>This multi-purpose chair was designed during a week-long Furniture Design scholarship at Anderson Ranch. The chair is built out of 3/4" plywood and joined together with domino joints. It is hand-painted with old-fashioned milk paints.</p>
+      </div>
+    </div>
+    </div>
+
+    <div style="background-color: #f9a874; padding-top: 30px; padding-bottom: 30px;">
+    <h1 id="lily">RAINBOW OUTFIT</h1>
+    <div class="row">
+      <div class="column1">
+        <p>This outfit was designed and made for the 2017 Colorado College fashion show using scrap colorful fabric and old pants. Pictured is Lily modeling the top, shorts, and cape.</p>
+      </div>
+      <div class="column2">
+        <img src="images/products_images/lily.jpeg" style="width:100%">
+        <img src="images/products_images/lily2.jpeg" style="width:100%; padding-top: 30px;">
+      </div>
+    </div>
+    </div>
+
 </body>
 </html>
 
 <script>
-  
+
     var slideIndex = 1;
     showDivs(slideIndex);
 
@@ -101,15 +146,15 @@
         var i;
         var x = document.getElementsByClassName("mySlides");
         var dots = document.getElementsByClassName("demo");
-        if (n > x.length) {slideIndex = 1}    
+        if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length}
         for (i = 0; i < x.length; i++) {
-            x[i].style.display = "none";  
+            x[i].style.display = "none";
         }
         for (i = 0; i < dots.length; i++) {
             dots[i].className = dots[i].className.replace(" w3-red", "");
         }
-        x[slideIndex-1].style.display = "block";  
+        x[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " w3-red";
     }
 </script>
