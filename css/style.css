@@ -2,9 +2,6 @@
     width: 100px;
     height: 100px;
 }
-.logo:hover {
-    filter: invert(100%);
-}
 .banner {
     position: relative;
     background-size: cover;
@@ -34,7 +31,7 @@ p {
     font-family: 'Source Code Pro';
     font-weight: 100;
     font-size: 20px;
-    color: black;
+    color: #282828;
     text-align: left;
 }
 .image1 {
@@ -46,7 +43,7 @@ p {
 .topnav {
     overflow: hidden;
 }
-  
+
 .topnav a {
     float: left;
     color: #fff;
@@ -54,18 +51,40 @@ p {
     padding: 14px 16px;
     text-decoration: none;
     font-size: 17px;
+    font-weight: 800;
 }
-  
+
 .topnav a:hover {
     color: #000;
 }
-  
+
 .topnav a.active {
-    color: #ff511c;
+    color: #f9a874;
 }
 
 a {
     font-family: 'Source Code Pro';
     font-weight: 100;
     font-size: 25px;
+}
+#myBtn {
+  display = none;
+  position = fixed;
+  bottom: 9px;
+  right: 100px;
+  z-index: 99;
+  font-size: 14px;
+  border: none;
+  outline: none;
+  background-color: #282828;
+  color: white;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 4px;
+  float: right;
+  margin-right: 50px;
+  margin-bottom: 50px;
+}
+#myBtn:hover {
+  background-color: #f9a874;
 }

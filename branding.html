@@ -38,13 +38,14 @@
   .w3-button {
       background-color: #f9a874;
       color: white;
-      font-family: 'Source Code Pro';
-  }
   .w3-button:hover {
     background-color: #198787;
   }
   .w3-button:active {
       background-color: #f05428;
+  }
+  .topnav a.active {
+    color: #f9a874;
   }
 
 </style>
@@ -68,24 +69,11 @@
     <img src="images/branding_images/title.png" style="width:80%;">
     <img src="images/branding_images/fonts_and_colors.png" style="width:80%; padding-top: 5%; ">
     <img src="images/branding_images/logos.png" style="width:80%; padding-top: 5%; padding-bottom: 5%;">
-
-
-    <!--div class="w3-content" style="max-width:55%">
-            <img class="mySlides" src="images/branding_images/title.png" style="width:100%">
-            <img class="mySlides" src="images/branding_images/fonts_and_colors.png" style="width:100%">
-            <img class="mySlides" src="images/branding_images/logos.png" style="width:100%">
-
-        <div class="w3-section">
-            <button class="w3-button" onclick="plusDivs(-1)">❮ Prev</button>
-            <button class="w3-button demo" onclick="currentDiv(1)">1</button>
-            <button class="w3-button demo" onclick="currentDiv(2)">2</button>
-            <button class="w3-button demo" onclick="currentDiv(3)">3</button>
-            <button class="w3-button" onclick="plusDivs(1)">Next ❯</button>
-        </div>
-    </div-->
-
-</body>
 </html>
+
+<footer>
+  <button onclick="topFunction()" id="myBtn" title="Go to top">go to top</button>
+</footer>
 
 <script>
 
@@ -115,4 +103,24 @@
         x[slideIndex-1].style.display = "block";
         dots[slideIndex-1].className += " w3-red";
     }
+
+
+    window.onscroll = function() {scrollFunction()};
+
+    // When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
 </script>

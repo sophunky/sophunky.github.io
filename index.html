@@ -2,21 +2,15 @@
 <html>
 <link href='https://fonts.googleapis.com/css?family=Source Code Pro' rel='stylesheet'>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="css/style.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="css/style.css">
 <link rel='icon' href='favicon.ico' type='image/x-icon'/ >
 
 
 <style>
   body {
-    background-color: #282828;
+    background-color: #198787;
     text-align: center;
-  }
-  h1 {
-    font-family: monospace;
-    font-weight: 100;
-    font-size: 70px;
-    color: white;
   }
   .parent {
     position: relative;
@@ -31,10 +25,6 @@
       height: auto;
       padding-bottom: 15px;
   }
-  .logo:hover {
-    filter: brightness(0) invert(1);
-  }
-
   .container {
     position: relative;
     top: 0;
@@ -58,6 +48,9 @@
   .topnav a.active {
     color: #282828;
   }
+  a {
+    text-decoration: none;
+  }
 
 </style>
 
@@ -71,26 +64,15 @@
     <a href="about_me.html">about me</a>
 </div>
 
-<head>
-    <img class="logo" src="images/home_images/sophunkylogo.png" onclick="homePage()"/>
-    <title>Sophunky</title>
-    <h2>Site in Progress, stay tuned for the full version !</h2>
-</head>
+    <img class="logo" src="images/home_images/sophunky_logo_bw.png" onclick="switchWords()"/>
+    <title>sophunky</title>
+    <!--a id="link" href="index.html"><h1 id="sophunky" style="padding-top: 10px; color: #282828;">sophie mittelstadt's design & art portfolio website</h1><a-->
+    <p style="padding-top: 10px; color: #fff; text-align: center; font-size: 30px;">sophie mittelstadt's design & art portfolio website</p>
 
-<body>
+    <img src="images/branding_images/title.png" style="width:80%;">
+    <img src="images/branding_images/fonts_and_colors.png" style="width:80%; padding-top: 5%; ">
+    <img src="images/branding_images/logos.png" style="width:80%; padding-top: 5%; padding-bottom: 5%;">
 
-  <!--div class="parent">
-    <img class="image1" src="images/home_images/malleable.png" onclick="malleable()"/>
-    <img class="image1" src="images/home_images/products.png" onclick="homePage()"/>
-    <img class="image1" src="images/home_images/digital_doodles.png" onclick="homePage()"/>
-  </div>
-  <div class="parent">
-    <img class="image1" src="images/home_images/malleable.png" onclick="homePage()"/>
-    <img class="image1" src="images/home_images/products.png" onclick="homePage()"/>
-    <img class="image1" src="images/home_images/plastic_peacock.png" onclick="aboutMe()"/>
-  </div-->
-
-</body>
 </html>
 
 <script>
@@ -102,5 +84,17 @@
     }
     function aboutMe() {
         location.replace("about_me.html");
+    }
+    counter = 0;
+    function switchWords() {
+        if(counter==0){
+          document.getElementById("sophunky").innerHTML = "click me to check out some art!";
+          document.getElementById("link").href="art.html";
+          counter = counter + 1;
+        }
+        else if (counter==1) {
+          document.getElementById("sophunky").innerHTML = "New text!";
+          counter = counter + 1;
+        }
     }
 </script>

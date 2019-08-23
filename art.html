@@ -18,7 +18,7 @@
   }
 
   body {
-    background: #3a4a69;
+    background: #282828;
   }
 
   .header {
@@ -49,6 +49,27 @@
   .topnav a.active {
     color: #f9a874;
   }
+  .column1 {
+    width: 50%;
+    float: left;
+    padding: 30px;
+  }
+  .column2 {
+    width: 50%;
+    float: left;
+    padding: 30px;
+  }
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  a {
+    text-decoration: none;
+  }
+  .w3-red , .w3-hover-red:hover{
+    background-color: #282828;
+  }
 
 </style>
 
@@ -70,7 +91,7 @@
 
 
     <div class="w3-content" style="max-width:55%">
-            <img class="mySlides" src="images/art_images/drawing1.png" style="width:90%; margin-left: 5%;">
+            <a href="#drawings"><img class="mySlides" src="images/art_images/drawing1.png" style="width:90%; margin-left: 5%;"></a>
             <img class="mySlides" src="images/art_images/thesis7.jpg" style="width:100%">
             <img class="mySlides" src="images/art_images/thesis14.jpg" style="width:100%">
             <img class="mySlides" src="images/art_images/thesis25.jpg" style="width:100%">
@@ -87,6 +108,19 @@
             <button class="w3-button demo" onclick="currentDiv(6)">6</button>
             <button class="w3-button" onclick="plusDivs(1)">Next ></button>
         </div>
+    </div>
+
+    <div style="background-color: #f9a874; padding-top: 30px; padding-bottom: 30px;">
+    <h1 id="drawings">DRAWINGS</h1>
+    <p style="padding-left: 10%; padding-right: 10%; text-align:center;">This outfit was designed and made for the 2017 Colorado College fashion show using scrap colorful fabric and old pants. Pictured is Lily modeling the top, shorts, and cape.</p>
+    <div class="row">
+      <div class="column1">
+        <img src="images/art_images/drawing1.png" style="width:100%">
+      </div>
+      <div class="column2">
+        <img src="images/art_images/drawing2.jpg" style="width:100%;">
+      </div>
+    </div>
     </div>
 
 </body>
